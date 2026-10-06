@@ -120,6 +120,40 @@ img {
   letter-spacing: 0.08em;
   text-transform: uppercase;
   font-size: 0.8rem;
+  transition: color 0.2s ease;
+}
+
+.eyebrow::before {
+  content: "Hello, I’m";
+  display: inline-block;
+}
+
+.eyebrow:hover::before {
+  content: "Hola, Soy";
+}
+
+.eyebrow:hover {
+  color: var(--blue-dark);
+}
+
+.name-text {
+  position: relative;
+  display: inline-block;
+  color: var(--blue-dark);
+  transition: color 0.2s ease;
+}
+
+.name-text::before {
+  content: "Ng Yuen Ting";
+  display: inline-block;
+}
+
+.name-text:hover::before {
+  content: "Stella";
+}
+
+.name-text:hover {
+  color: var(--blue);
 }
 
 h1,
@@ -164,7 +198,7 @@ h1 {
 
 .button:hover {
   text-decoration: none;
-  transform: translateY(-1px);
+  transform: none;
 }
 
 .button.primary {
@@ -173,9 +207,7 @@ h1 {
 }
 
 .button.secondary {
-  background: transparent;
-  color: var(--blue-dark);
-  border: 2px solid var(--border);
+  display: none;
 }
 
 .section {
@@ -183,7 +215,7 @@ h1 {
 }
 
 .alt-section {
-  background: rgba(223, 238, 248, 0.35);
+  background: rgba(237, 247, 255, 0.7);
 }
 
 h2 {
@@ -280,6 +312,21 @@ p {
   color: var(--muted);
 }
 
+.exchange-courses {
+  margin: 0.6rem 0 0.75rem;
+  padding-left: 1.15rem;
+  color: var(--muted);
+}
+
+.exchange-courses li + li {
+  margin-top: 0.25rem;
+}
+
+.timeline-content a {
+  color: var(--tech-sky);
+  font-weight: 700;
+}
+
 .scholarships-card {
   background: rgba(255, 255, 255, 0.9);
   border: 1px solid var(--border);
@@ -287,6 +334,13 @@ p {
   padding: 1.3rem 1.25rem;
   box-shadow: 0 10px 24px rgba(15, 45, 69, 0.06);
   border-top: 4px solid var(--tech-sky);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.scholarships-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(15, 45, 69, 0.12);
+  border-color: rgba(0, 168, 255, 0.45);
 }
 
 .scholarships-card h3 {
@@ -368,23 +422,91 @@ p {
 
 .language-level {
   margin-top: 0.35rem;
-  color: #7b8795;
+  color: var(--blue-dark);
   font-size: 0.78rem;
   font-weight: 400;
   letter-spacing: 0;
   text-transform: none;
 }
 
+.scholarship-date {
+  display: inline-block;
+  margin-bottom: 0.2rem;
+  margin-right: 0.25rem;
+  font-size: 0.76rem;
+  line-height: 1.4;
+}
+
+.section-heading {
+  margin-bottom: 1.5rem;
+}
+
+.section-subtitle {
+  margin: 0 0 0.5rem;
+  color: var(--tech-sky);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.projects-section {
+  background: rgba(255, 255, 255, 0.9);
+}
+
 .projects-grid {
-  display: none;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
 }
 
 .project-card {
-  display: none;
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid var(--border);
+  border-top: 4px solid var(--tech-sky);
+  border-radius: 18px;
+  padding: 1.3rem 1.25rem;
+  box-shadow: 0 8px 22px rgba(15, 45, 69, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(15, 45, 69, 0.12);
+  border-color: rgba(0, 168, 255, 0.4);
+}
+
+.project-topline {
+  margin-bottom: 0.75rem;
+}
+
+.project-tag {
+  display: inline-block;
+  padding: 0.38rem 0.7rem;
+  border-radius: 999px;
+  background: var(--tech-sky-soft);
+  color: var(--blue-dark);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.project-card h3 {
+  margin-bottom: 0.75rem;
+  font-size: 1.18rem;
+  color: var(--blue-dark);
+}
+
+.project-card p {
+  margin: 0;
+  color: var(--muted);
 }
 
 .contact-section {
-  background: var(--sky);
+  background: rgba(255, 255, 255, 0.9);
 }
 
 .site-footer {
