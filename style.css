@@ -336,7 +336,9 @@ p {
   border-top: 4px solid var(--tech-sky);
   transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 }
-
+.scholarship-list li small {
+  color: #5b677a;
+}
 .scholarships-card:hover {
   transform: translateY(-2px);
   box-shadow: 0 14px 30px rgba(15, 45, 69, 0.12);
