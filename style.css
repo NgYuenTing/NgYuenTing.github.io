@@ -94,12 +94,16 @@ img {
 }
 
 .hero {
-  background: linear-gradient(135deg, #e6f4ff 0%, #f0f9ff 100%);
+  background: linear-gradient(180deg, #ffffff 0%, #e6f4ff 100%);
   padding: 5rem 0 4rem;
 }
 
 .hero-content {
   max-width: 760px;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  padding: 0;
 }
 
 .eyebrow {
@@ -391,6 +395,7 @@ p {
   flex-wrap: wrap;
   gap: 1rem;
   margin-top: 1.5rem;
+  background: var(--paper);
 }
 
 .language-card {
@@ -448,7 +453,7 @@ p {
 }
 
 .projects-section {
-  background: var(--paper);
+  background: var( #e6f4ff);
 }
 
 .projects-grid {
@@ -503,7 +508,7 @@ p {
 }
 
 .contact-section {
-  background: var(--paper);
+  background: var( #e6f4ff);
 }
 
 .site-footer {
