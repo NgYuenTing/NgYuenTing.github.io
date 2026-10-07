@@ -1,22 +1,15 @@
-/*
-  This stylesheet controls the page layout and colours.
-  To change your text, edit the HTML file.
-  To change colours, update the CSS variables below.
-  To change spacing, adjust the values in the margin and padding rules.
-*/
-
 :root {
-  --cream: #121824;
-  --paper: #0b131e;
-  --sky: #1a2332;
+  --cream: #f4f8fb;
+  --paper: #ffffff;
+  --sky: #e6f4ff;
   --blue: #00a8ff;
-  --blue-dark: #38bdf8;
+  --blue-dark: #0082cc;
   --tech-sky: #00a8ff;
-  --tech-sky-soft: #1e293b;
-  --text: #e2e8f0;
-  --muted: #94a3b8;
-  --border: #334155;
-  --shadow: rgba(0, 0, 0, 0.4);
+  --tech-sky-soft: #e0f2fe;
+  --text: #2d3748;
+  --muted: #4a5568;
+  --border: #bae6fd;
+  --shadow: rgba(0, 168, 255, 0.1);
 }
 
 * {
@@ -34,11 +27,8 @@ body {
   color: var(--text);
   background: var(--paper);
 }
-  
-h1,
-h2,
-h3,
-p {
+
+h1, h2, h3, p {
   color: var(--text);
 }
 
@@ -51,8 +41,7 @@ a:hover {
   text-decoration: underline;
 }
 
-a:focus-visible,
-button:focus-visible {
+a:focus-visible, button:focus-visible {
   outline: 3px solid var(--blue-dark);
   outline-offset: 3px;
 }
@@ -67,7 +56,7 @@ img {
 }
 
 .site-header {
-  background: rgba(255, 253, 249, 0.9);
+  background: rgba(255, 255, 255, 0.9);
   border-bottom: 1px solid var(--border);
   position: sticky;
   top: 0;
@@ -105,7 +94,7 @@ img {
 }
 
 .hero {
-  background: linear-gradient(180deg, var(--sky) 0%, #edf5fb 100%);
+  background: linear-gradient(135deg, #e6f4ff 0%, #f0f9ff 100%);
   padding: 5rem 0 4rem;
 }
 
@@ -156,9 +145,7 @@ img {
   color: var(--blue);
 }
 
-h1,
-h2,
-h3 {
+h1, h2, h3 {
   color: var(--blue-dark);
   line-height: 1.2;
   margin-top: 0;
@@ -215,7 +202,7 @@ h1 {
 }
 
 .alt-section {
-  background: rgba(237, 247, 255, 0.7);
+  background: var(--cream);
 }
 
 h2 {
@@ -269,26 +256,26 @@ p {
   height: 22px;
   border-radius: 50%;
   background: var(--tech-sky);
-  border: 4px solid #f5f9fc;
+  border: 4px solid var(--paper);
   box-shadow: 0 0 0 4px rgba(0, 168, 255, 0.12);
   margin-top: 0.3rem;
   z-index: 1;
 }
 
 .timeline-content {
-  background: rgba(255, 255, 255, 0.84);
+  background: var(--paper);
   border: 1px solid var(--border);
   border-left: 4px solid var(--blue);
   border-radius: 14px;
   padding: 1rem 1.25rem;
-  box-shadow: 0 8px 24px rgba(15, 45, 69, 0.06);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
 .timeline-content:hover {
   transform: translateY(-2px);
-  box-shadow: 0 14px 30px rgba(15, 45, 69, 0.12);
-  border-color: rgba(0, 168, 255, 0.45);
+  box-shadow: 0 8px 20px rgba(0, 168, 255, 0.15);
+  border-color: var(--blue);
 }
 
 .timeline-date {
@@ -328,21 +315,23 @@ p {
 }
 
 .scholarships-card {
-  background: rgba(255, 255, 255, 0.9);
+  background: var(--paper);
   border: 1px solid var(--border);
   border-radius: 18px;
   padding: 1.3rem 1.25rem;
-  box-shadow: 0 10px 24px rgba(15, 45, 69, 0.06);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   border-top: 4px solid var(--tech-sky);
   transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 }
+
 .scholarship-list li small {
-  color: #5b677a;
+  color: var(--muted);
 }
+
 .scholarships-card:hover {
   transform: translateY(-2px);
-  box-shadow: 0 14px 30px rgba(15, 45, 69, 0.12);
-  border-color: rgba(0, 168, 255, 0.45);
+  box-shadow: 0 8px 20px rgba(0, 168, 255, 0.15);
+  border-color: var(--blue);
 }
 
 .scholarships-card h3 {
@@ -366,7 +355,7 @@ p {
   border-radius: 12px;
   background: var(--tech-sky-soft);
   border: 1px solid rgba(0, 168, 255, 0.18);
-  color: var(--blue-dark);
+  color: var(--text);
   font-size: 0.88rem;
   font-weight: 600;
   transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
@@ -374,8 +363,8 @@ p {
 
 .scholarship-list li:hover {
   transform: translateY(-2px);
-  box-shadow: 0 12px 26px rgba(15, 45, 69, 0.12);
-  border-color: rgba(0, 168, 255, 0.42);
+  box-shadow: 0 6px 16px rgba(0, 168, 255, 0.12);
+  border-color: var(--blue);
 }
 
 .scholarship-icon {
@@ -402,29 +391,29 @@ p {
   display: flex;
   flex-direction: column;
   min-width: 170px;
-  background: rgba(255, 255, 255, 0.85);
+  background: var(--paper);
   border: 1px solid var(--border);
   border-radius: 14px;
   padding: 1rem 1.25rem;
-  box-shadow: 0 8px 22px rgba(15, 45, 69, 0.06);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
 .language-card:hover {
   transform: translateY(-2px);
-  box-shadow: 0 14px 30px rgba(15, 45, 69, 0.12);
-  border-color: rgba(0, 168, 255, 0.4);
+  box-shadow: 0 8px 20px rgba(0, 168, 255, 0.15);
+  border-color: var(--blue);
 }
 
 .language-name {
   font-size: 1rem;
   font-weight: 700;
-  color: var(--blue-dark);
+  color: var(--text);
 }
 
 .language-level {
   margin-top: 0.35rem;
-  color: var(--blue-dark);
+  color: var(--muted);
   font-size: 0.78rem;
   font-weight: 400;
   letter-spacing: 0;
@@ -453,7 +442,7 @@ p {
 }
 
 .projects-section {
-  background: rgba(255, 255, 255, 0.9);
+  background: var(--paper);
 }
 
 .projects-grid {
@@ -465,19 +454,19 @@ p {
 .project-card {
   display: flex;
   flex-direction: column;
-  background: rgba(255, 255, 255, 0.9);
+  background: var(--paper);
   border: 1px solid var(--border);
   border-top: 4px solid var(--tech-sky);
   border-radius: 18px;
   padding: 1.3rem 1.25rem;
-  box-shadow: 0 8px 22px rgba(15, 45, 69, 0.06);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
 .project-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 14px 30px rgba(15, 45, 69, 0.12);
-  border-color: rgba(0, 168, 255, 0.4);
+  box-shadow: 0 8px 20px rgba(0, 168, 255, 0.15);
+  border-color: var(--blue);
 }
 
 .project-topline {
@@ -489,7 +478,7 @@ p {
   padding: 0.38rem 0.7rem;
   border-radius: 999px;
   background: var(--tech-sky-soft);
-  color: var(--blue-dark);
+  color: var(--text);
   font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.04em;
@@ -499,7 +488,7 @@ p {
 .project-card h3 {
   margin-bottom: 0.75rem;
   font-size: 1.18rem;
-  color: var(--blue-dark);
+  color: var(--text);
 }
 
 .project-card p {
@@ -508,12 +497,13 @@ p {
 }
 
 .contact-section {
-  background: rgba(255, 255, 255, 0.9);
+  background: var(--paper);
 }
 
 .site-footer {
-  background: var(--blue-dark);
-  color: #edf5fb;
+  background: var(--paper);
+  border-top: 1px solid var(--border);
+  color: var(--muted);
   padding: 1.5rem 0;
   text-align: center;
 }
@@ -527,15 +517,12 @@ p {
     flex-direction: column;
     padding: 1rem 0;
   }
-
   .projects-grid {
     grid-template-columns: 1fr;
   }
-
   .hero {
     padding-top: 4rem;
   }
-
   .button {
     width: 100%;
     text-align: center;
