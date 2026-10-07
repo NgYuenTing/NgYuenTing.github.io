@@ -390,12 +390,15 @@ p {
   flex-shrink: 0;
 }
 
+.language-section {
+  background: #ffffff;
+}
+
 .language-grid {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
   margin-top: 1.5rem;
-  background: var(--paper);
 }
 
 .language-card {
@@ -453,7 +456,7 @@ p {
 }
 
 .projects-section {
-  background: var( #e6f4ff);
+  background: #e6f4ff;
 }
 
 .projects-grid {
@@ -508,7 +511,7 @@ p {
 }
 
 .contact-section {
-  background: var( #e6f4ff);
+  background: #e6f4ff;
 }
 
 .site-footer {
